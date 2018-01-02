@@ -5,7 +5,9 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('admin/template');
+		$data['main_view'] = 'admin/tambahUndangan';
+		$data['script'] = 'admin/script/udanganScript';
+		$this->load->view('admin/template',$data);
 	}
 
 	public function undangan()

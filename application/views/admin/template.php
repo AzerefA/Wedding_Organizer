@@ -364,7 +364,14 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <?php $this->load->view($main_view); ?>
+
+  <?php
+
+  if (!empty($main_view)) {
+    $this->load->view($main_view);
+  }
+
+   ?>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
@@ -609,6 +616,12 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>assets/dist/js/demo.js"></script>
 
-<?php $this->load->view($script); ?>
+
+<?php 
+if (!empty($script)) {
+    $this->load->view($script);
+  }
+
+ ?>
 </body>
 </html>
