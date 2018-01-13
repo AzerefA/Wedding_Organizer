@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Wedding Plan a Wedding Category Bootstrap responsive Website Template | Home :: w3layouts</title>
+<title>Wedding DUBY</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <meta name="keywords" content="Wedding Plan Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -96,69 +96,56 @@ $(document).ready(function(){
 								<li class="dropdown">
 									<a href="codes.html" class="dropdown-toggle" data-hover="Pages" data-toggle="dropdown">Lainnya <b class="fa fa-angle-down fa-fw"></b></a>
 									<ul class="dropdown-menu">
+										<li><a href="<?php echo base_url() ?>index.php/gedung">Gedung</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/dekor">Dekorasi</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/undangan">Undangan</a></li>
 										<li><a href="<?php echo base_url() ?>index.php/mc">Pembawa Acara</a></li>
-										<li><a href="<?php echo base_url() ?>index.php/supportAcara">Pengisi Acara</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/support">Pengisi Acara</a></li>
 										<li><a href="<?php echo base_url() ?>index.php/photographer">Fotografer</a></li>
 										<li><a href="<?php echo base_url() ?>index.php/catering">Katering</a></li>
 									</ul>
 								</li>
-								<li><a href="#">Pinjam</a></li>
+								<li><a href="<?php echo base_url() ?>index.php/pinjam">Pinjam</a></li>
 								<li><a href="#">Info</a></li>
 								<li class="w3ls-button">
-									<a href="blog.html">Login <b class="fa fa-user fa-fw"></b></a>
+									<a href="<?php echo base_url() ?>index.php/login">Login <b class="fa fa-user fa-fw"></b></a>
 								</li>
 							</ul>
 							</div><!-- /.navbar-collapse -->
 						</div>
 				</div>
 			</div>
+								<br>
+								<br>
+								<br>
 			<div class="w3layouts-banner-slider">
 				<div class="container">
 					<div class="slider">
 						<div class="callbacks_container">
 							<ul class="rslides callbacks callbacks1" id="slider4">
 								<li>
+								
 									<div class="agileits-banner-info">
 										<h3>Lorem ipsum</h3>
 										<p>Etiam ut maximus mauris, eu pretium neque. Donec nibh lectus, blandit id metus non, bibendum dictum quam.</p>
-										<div class="w3-button">
-											<div class="w3ls-button">
-												<a href="single.html">More</a>
-											</div>
-										</div>
 									</div>
 								</li>
 								<li>
 									<div class="agileits-banner-info">
 										<h3>Donec posuere</h3>
 										<p>Sed tempus efficitur ex et elementum. Nulla at diam blandit, posuere dui vel, tempor arcu. Nulla varius.</p>
-										<div class="w3-button">
-											<div class="w3ls-button">
-												<a href="single.html">More</a>
-											</div>
-										</div>
 									</div>
 								</li>
 								<li>
 									<div class="agileits-banner-info">
 										<h3>Lorem ipsum</h3>
 										<p>Etiam ut maximus mauris, eu pretium neque. Donec nibh lectus, blandit id metus non, bibendum dictum quam.</p>
-										<div class="w3-button">
-											<div class="w3ls-button">
-												<a href="single.html">More</a>
-											</div>
-										</div>
 									</div>
 								</li>
 								<li>
 									<div class="agileits-banner-info">
 										<h3>Donec posuere</h3>
 										<p>Sed tempus efficitur ex et elementum. Nulla at diam blandit, posuere dui vel, tempor arcu. Nulla varius.</p>
-										<div class="w3-button">
-											<div class="w3ls-button">
-												<a href="single.html">More</a>
-											</div>
-										</div>
 									</div>
 								</li>
 							</ul>
@@ -199,17 +186,17 @@ $(document).ready(function(){
 				<div class="agileits-border"> </div>
 			</div>
 		</div>
-	    <a href="index-2.html" class="block1">
-		  <img src="<?php echo base_url() ?>assets/classic/images/blur_img1.jpg" alt="">
-		  <span class="price"><span>magna non nunc</span><span><small>$</small> 29.35</span><strong></strong></span>
+	    <a href="<?php echo base_url() ?>index.php/platinum" class="block1">
+		  <img src="<?php echo base_url() ?>assets/classic/images/platinum.jpg" alt="">
+		  <span class="price"><span>Platinum</span><span><small>$</small> 29.35</span><strong></strong></span>
 		</a>
-		<a href="index-2.html" class="block1">
-		  <img src="<?php echo base_url() ?>assets/classic/images/blur_img2.jpg" alt="">
-		  <span class="price"><span>terto nomino</span><span><small>$</small> 35.45</span><strong></strong></span>
+		<a href="<?php echo base_url() ?>index.php/gold" class="block1">
+		  <img src="<?php echo base_url() ?>assets/classic/images/gold.jpg" alt="">
+		  <span class="price"><span>Gold</span><span><small>$</small> 35.45</span><strong></strong></span>
 		</a>
-		<a href="index-2.html" class="block1">
-		  <img src="<?php echo base_url() ?>assets/classic/images/blur_img3.jpg" alt="">
-		  <span class="price"><span>metus feugiat</span>
+		<a href="<?php echo base_url() ?>index.php/silver" class="block1">
+		  <img src="<?php echo base_url() ?>assets/classic/images/silver.jpg" alt="">
+		  <span class="price"><span>Silver</span>
 		<span><small>$</small> 50.10</span><strong></strong></span>
 		</a>
 	</div>
@@ -228,77 +215,38 @@ $(document).ready(function(){
 				<div id="myCarousel" class="myCarousel carousel slide sliderku">
 					<div class="carousel-inner">
 						<div class="active item">
-							<ul class="thumbnails">												
+							<ul class="thumbnails">	
+							<?php
+							for ($i=0; $i < 4; $i++) { 
+							?>											
 								<li class="span3">
 									<div class="product-box">
 										<span class="sale_tag"></span>
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/1.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-										<a href="products.html" class="category">Commodo consequat</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/1.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p>
 										<p class="price">$17.25</p>
 									</div>
 								</li>
-								<li class="span3">
-									<div class="product-box">
-										<span class="sale_tag"></span>
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/2.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Quis nostrud exerci tation</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
-										<p class="price">$32.50</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/3.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Know exactly turned</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
-										<p class="price">$14.20</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/4.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">You think fast</a><br/>
-										<a href="products.html" class="category">World once</a>
-										<p class="price">$31.45</p>
-									</div>
-								</li>
+							<?php
+							}
+							?>
 							</ul>
 						</div>
 						<div class="item">
 							<ul class="thumbnails">
+								<?php
+							for ($i=0; $i < 4; $i++) { 
+							?>											
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/5.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Know exactly</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/5.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p>
 										<p class="price">$22.30</p>
 									</div>
 								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/6.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-										<a href="products.html" class="category">Commodo consequat</a>
-										<p class="price">$40.25</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/7.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">You think water</a><br/>
-										<a href="products.html" class="category">World once</a>
-										<p class="price">$10.45</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/8.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Quis nostrud exerci</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
-										<p class="price">$35.50</p>
-									</div>
-								</li>		
+							<?php
+							}
+							?>		
 							</ul>
 						</div>
 					</div>							
@@ -325,34 +273,30 @@ $(document).ready(function(){
 								<li class="span3">
 									<div class="product-box">
 										<span class="sale_tag"></span>
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/1.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-										<a href="products.html" class="category">Commodo consequat</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/1.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p>
 										<p class="price">$17.25</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
 										<span class="sale_tag"></span>
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/2.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Quis nostrud exerci tation</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/2.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p>
 										<p class="price">$32.50</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/3.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Know exactly turned</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/3.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p>
 										<p class="price">$14.20</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/4.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">You think fast</a><br/>
-										<a href="products.html" class="category">World once</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/4.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p>
 										<p class="price">$31.45</p>
 									</div>
 								</li>
@@ -362,33 +306,30 @@ $(document).ready(function(){
 							<ul class="thumbnails">
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/5.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Know exactly</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/5.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p>
 										<p class="price">$22.30</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/6.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-										<a href="products.html" class="category">Commodo consequat</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/6.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p>><br/>
+									
 										<p class="price">$40.25</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/7.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">You think water</a><br/>
-										<a href="products.html" class="category">World once</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/7.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p><br/>
 										<p class="price">$10.45</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/8.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Quis nostrud exerci</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/8.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p><br/>
 										<p class="price">$35.50</p>
 									</div>
 								</li>		
@@ -418,34 +359,30 @@ $(document).ready(function(){
 								<li class="span3">
 									<div class="product-box">
 										<span class="sale_tag"></span>
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/1.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-										<a href="products.html" class="category">Commodo consequat</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/1.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p></br>
 										<p class="price">$17.25</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
 										<span class="sale_tag"></span>
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/2.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Quis nostrud exerci tation</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/2.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p></br>
 										<p class="price">$32.50</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/3.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Know exactly turned</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/3.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p><br/>
 										<p class="price">$14.20</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/4.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">You think fast</a><br/>
-										<a href="products.html" class="category">World once</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/4.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p><br/>
 										<p class="price">$31.45</p>
 									</div>
 								</li>
@@ -455,33 +392,29 @@ $(document).ready(function(){
 							<ul class="thumbnails">
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/5.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Know exactly</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/5.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p><br/>
 										<p class="price">$22.30</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/6.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-										<a href="products.html" class="category">Commodo consequat</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/6.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p><br/>
 										<p class="price">$40.25</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/7.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">You think water</a><br/>
-										<a href="products.html" class="category">World once</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/7.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p><br/>
 										<p class="price">$10.45</p>
 									</div>
 								</li>
 								<li class="span3">
 									<div class="product-box">
-										<p><a href="product_detail.html"><img src="<?php echo base_url() ?>assets/themes/images/ladies/8.jpg" alt="" /></a></p>
-										<a href="product_detail.html" class="title">Quis nostrud exerci</a><br/>
-										<a href="products.html" class="category">Quis nostrud</a>
+										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/8.jpg" alt="" /></a></p>
+										<p>Commodo consequat</p><br/>
 										<p class="price">$35.50</p>
 									</div>
 								</li>		
@@ -495,44 +428,14 @@ $(document).ready(function(){
 	<!-- //Undangan -->
 
 	<!-- popular -->
-	<div class="popular-section-wthree jarallax">
-		<div class="agileinfo-dot">
-			<div class="container">	
-				<div class="w3-heading-grid popular-heading">
-					<h3>Popular Services</h3>
-					<div class="agileits-border"> </div>
-				</div>
-				<div class="popular-agileinfo">
-					<div class="col-md-3 popular-grid">
-						<i class="fa fa-bell" aria-hidden="true"></i>
-						<h4>Sed tempus</h4>
-						<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores hasellus</p>
-					</div>
-					<div class="col-md-3 popular-grid">
-						<i class="fa fa-anchor" aria-hidden="true"></i>
-						<h4>Nulla varius</h4>
-						<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores hasellus</p>
-					</div>
-					<div class="col-md-3 popular-grid popular-grid-bottom">
-						<i class="fa fa-book" aria-hidden="true"></i>
-						<h4>Morbi tempus</h4>
-						<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores hasellus</p>
-					</div>
-					<div class="col-md-3 popular-grid">
-						<i class="fa fa-car" aria-hidden="true"></i>
-						<h4>Lorem ipsum</h4>
-						<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores hasellus</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
+	<div class="container_12 tinggi">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.80348046252!2d112.65841082916307!3d-7.976828671512101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6285c5c1b44e3%3A0xf6c889ac7452dc3a!2sSMK+Telkom+Malang!5e0!3m2!1sen!2sid!4v1515465213361" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 	<!-- //popular -->
 	<!-- copyright -->
 	<div class="copyright">
 		<div class="container">
-			<p>© 2017 Wedding Plan. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			<p>© 2017 Wedding Plan. All rights reserved | Design by <a href="#">DUBY</a></p>
 		</div>
 	</div>
 	<!-- //copyright -->
