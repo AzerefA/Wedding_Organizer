@@ -8,8 +8,8 @@ class User extends CI_Model {
 	 	$this->db->select('id');
 	 	$this->db->from('user');
 	 	$this->db->where(array('google' => $data['Google'], 'id' => $data['id']));
-	 	$result = $this->db->get();
-	 	$row = $result->num_rows();
+	 	$query = $this->db->get();
+	 	$row = $query->num_rows();
 
 	 	if ($row > 0) {
 	 		$result = $query->row_array();

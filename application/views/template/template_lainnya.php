@@ -25,6 +25,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- font -->
 <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/datepicker.css">
 <!-- //font -->
 <script src="<?php echo base_url() ?>assets/js/jquery-1.11.1.min.js"></script>
 <script src="<?php echo base_url() ?>assets/js/bootstrap.js"></script>
@@ -136,6 +138,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</script>
 		<!-- for-gallery-rotation -->
 			<script src="<?php echo base_url() ?>assets/other/js/modernizr.custom.97074.js"></script>
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 			<!--swipebox -->	
 				<link rel="stylesheet" href="<?php echo base_url() ?>assets/other/css/swipebox.css">
 					<script src="<?php echo base_url() ?>assets/other/js/jquery.swipebox.min.js"></script> 
