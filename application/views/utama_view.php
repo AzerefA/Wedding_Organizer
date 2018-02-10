@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Wedding DUBY</title>
@@ -84,7 +84,7 @@ $(document).ready(function(){
 								<span class="icon-bar"></span>
 							  </button>
 								 <div class="navbar-brand logo ">
-									<h1><a href="index.html">Wedding <span>Plan</span></a></h1>
+									<h1><a href="<?php echo base_url() ?>index.php/home">Wedding <span>Duby</span></a></h1>
 								</div>
 
 							</div>
@@ -94,9 +94,9 @@ $(document).ready(function(){
 							<ul class="nav navbar-nav link-effect-4">
 								<li class="active first-list"><a href="<?php echo base_url() ?>index.php/home">Home</a> </li>
 								<li class="dropdown">
-									<a href="codes.html" class="dropdown-toggle" data-hover="Pages" data-toggle="dropdown">Lainnya <b class="fa fa-angle-down fa-fw"></b></a>
+									<a href="codes.html" class="dropdown-toggle" data-hover="Pages" data-toggle="dropdown">Produk<b class="fa fa-angle-down fa-fw"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="<?php echo base_url() ?>index.php/gedung">Gedung</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/Gedung">Gedung</a></li>
 										<li><a href="<?php echo base_url() ?>index.php/dekor">Dekorasi</a></li>
 										<li><a href="<?php echo base_url() ?>index.php/undangan">Undangan</a></li>
 										<li><a href="<?php echo base_url() ?>index.php/mc">Pembawa Acara</a></li>
@@ -105,11 +105,20 @@ $(document).ready(function(){
 										<li><a href="<?php echo base_url() ?>index.php/catering">Katering</a></li>
 									</ul>
 								</li>
-								<li><a href="<?php echo base_url() ?>index.php/pinjam">Pinjam</a></li>
-								<li><a href="#">Info</a></li>
-								<li class="w3ls-button">
-									<a href="<?php echo base_url() ?>index.php/login">Login <b class="fa fa-user fa-fw"></b></a>
+								<li><a href="<?php echo base_url() ?>index.php/pinjam">Pesan</a></li>
+								<li><a href="<?php echo base_url() ?>index.php/info">Info</a></li>
+								<?php if($this->session->userdata('loggedIn') == true){?>
+								<li class="dropdown">
+									<a href="codes.html" class="dropdown-toggle" data-hover="Pages" data-toggle="dropdown">Me<b class="fa fa-angle-down fa-fw"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="<?php echo base_url() ?>index.php/login/userprofil">My Profile</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/login/logout">Logout</a></li>
+										
+									</ul>
 								</li>
+								<?php }else{ ?>
+								<li class="w3ls-button"><a  href="<?php echo base_url() ;?>index.php/login">Login</a></li>
+								<?php } ?>
 							</ul>
 							</div><!-- /.navbar-collapse -->
 						</div>
@@ -126,26 +135,14 @@ $(document).ready(function(){
 								<li>
 								
 									<div class="agileits-banner-info">
-										<h3>Lorem ipsum</h3>
-										<p>Etiam ut maximus mauris, eu pretium neque. Donec nibh lectus, blandit id metus non, bibendum dictum quam.</p>
+										<h3>Wedding Organizer</h3>
+										<p>Website ini menyediakan beberapa pilihan untuk anda dalam ranagka mempersiapkan pernikahan sempurna</p>
 									</div>
 								</li>
 								<li>
 									<div class="agileits-banner-info">
-										<h3>Donec posuere</h3>
-										<p>Sed tempus efficitur ex et elementum. Nulla at diam blandit, posuere dui vel, tempor arcu. Nulla varius.</p>
-									</div>
-								</li>
-								<li>
-									<div class="agileits-banner-info">
-										<h3>Lorem ipsum</h3>
-										<p>Etiam ut maximus mauris, eu pretium neque. Donec nibh lectus, blandit id metus non, bibendum dictum quam.</p>
-									</div>
-								</li>
-								<li>
-									<div class="agileits-banner-info">
-										<h3>Donec posuere</h3>
-										<p>Sed tempus efficitur ex et elementum. Nulla at diam blandit, posuere dui vel, tempor arcu. Nulla varius.</p>
+										<h3>Duby Wedding</h3>
+										<p>Duby Wedding memberikan kenyamanan dan beberapa pilihan poduk untuk anda.</p>
 									</div>
 								</li>
 							</ul>
@@ -186,18 +183,18 @@ $(document).ready(function(){
 				<div class="agileits-border"> </div>
 			</div>
 		</div>
-	    <a href="<?php echo base_url() ?>index.php/platinum" class="block1">
+	    <a href="<?php echo base_url() ?>index.php/paket/platinum" class="block1">
 		  <img src="<?php echo base_url() ?>assets/classic/images/platinum.jpg" alt="">
-		  <span class="price"><span>Platinum</span><span><small>$</small> 29.35</span><strong></strong></span>
+		  <span class="price"><span></span><span><small></small> Platinum</span><strong></strong></span>
 		</a>
-		<a href="<?php echo base_url() ?>index.php/gold" class="block1">
+		<a href="<?php echo base_url() ?>index.php/paket/gold" class="block1">
 		  <img src="<?php echo base_url() ?>assets/classic/images/gold.jpg" alt="">
-		  <span class="price"><span>Gold</span><span><small>$</small> 35.45</span><strong></strong></span>
+		  <span class="price"><span></span><span><small></small> Gold</span><strong></strong></span>
 		</a>
-		<a href="<?php echo base_url() ?>index.php/silver" class="block1">
+		<a href="<?php echo base_url() ?>index.php/paket/silver" class="block1">
 		  <img src="<?php echo base_url() ?>assets/classic/images/silver.jpg" alt="">
-		  <span class="price"><span>Silver</span>
-		<span><small>$</small> 50.10</span><strong></strong></span>
+		  <span class="price"><span></span>
+		<span><small></small> Silver</span><strong></strong></span>
 		</a>
 	</div>
 	<!-- //EA -->
@@ -214,41 +211,34 @@ $(document).ready(function(){
 				</h4>
 				<div id="myCarousel" class="myCarousel carousel slide sliderku">
 					<div class="carousel-inner">
-						<div class="active item">
+					<?php 
+					$count = count($gedung);
+					$hasil = ceil((float)$count / 4);
+					$counter = 0;
+					for ($i=1; $i <= $hasil; $i++) { ?>
+					
+						<div class="<?php if($i==1){echo 'active';} ?> item">
 							<ul class="thumbnails">	
 							<?php
-							for ($i=0; $i < 4; $i++) { 
-							?>											
+							for($j=0;$j<=3;$j++) { 
+								if($counter < $count){?>											
 								<li class="span3">
 									<div class="product-box">
 										<span class="sale_tag"></span>
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/1.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p>
-										<p class="price">$17.25</p>
+										<p><img src="<?php echo base_url(); ?>uploads/<?php echo $gedung[$counter]['gambar_barang'];?>"/></p>
+										<p><?php echo $gedung[$counter]['nama_barang']; ?></p>
+										<p class="price">Rp. <?php echo number_format($gedung[$counter]['harga_barang']); ?></p>
 									</div>
 								</li>
 							<?php
+							$counter++;
 							}
+						}
 							?>
 							</ul>
 						</div>
-						<div class="item">
-							<ul class="thumbnails">
-								<?php
-							for ($i=0; $i < 4; $i++) { 
-							?>											
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/5.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p>
-										<p class="price">$22.30</p>
-									</div>
-								</li>
-							<?php
-							}
-							?>		
-							</ul>
-						</div>
+						<?php }?>
+						
 					</div>							
 				</div>
 			</div>						
@@ -266,75 +256,36 @@ $(document).ready(function(){
 						<a class="left button" href="#myCarousel2" data-slide="prev"></a><a class="right button" href="#myCarousel2" data-slide="next"></a>
 					</span>
 				</h4>
-				<div id="myCarousel2" class="myCarousel carousel slide sliderku">
+								<div id="myCarousel2" class="myCarousel carousel slide sliderku">
 					<div class="carousel-inner">
-						<div class="active item">
-							<ul class="thumbnails">												
+					<?php 
+					$count2 = count($dekor);
+					$hasil2 = ceil((float)$count2 / 4);
+					$counter2 = 0;
+					for ($i=1; $i <= $hasil2; $i++) { ?>
+					
+						<div class="<?php if($i==1){echo 'active';} ?> item">
+							<ul class="thumbnails">	
+							<?php
+							for($j=0;$j<=3;$j++) { 
+								if($counter2 < $count2){?>											
 								<li class="span3">
 									<div class="product-box">
 										<span class="sale_tag"></span>
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/1.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p>
-										<p class="price">$17.25</p>
+										<p><img src="<?php echo base_url(); ?>uploads/<?php echo $dekor[$counter2]['gambar_barang'];?>"/></p>
+										<p><?php echo $dekor[$counter2]['nama_barang']; ?></p>
+										<p class="price">Rp. <?php echo number_format($dekor[$counter2]['harga_barang']); ?></p>
 									</div>
 								</li>
-								<li class="span3">
-									<div class="product-box">
-										<span class="sale_tag"></span>
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/2.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p>
-										<p class="price">$32.50</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/3.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p>
-										<p class="price">$14.20</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/4.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p>
-										<p class="price">$31.45</p>
-									</div>
-								</li>
+							<?php
+							$counter2++;
+							}
+						}
+							?>
 							</ul>
 						</div>
-						<div class="item">
-							<ul class="thumbnails">
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/5.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p>
-										<p class="price">$22.30</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/6.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p>><br/>
-									
-										<p class="price">$40.25</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/7.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p><br/>
-										<p class="price">$10.45</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/8.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p><br/>
-										<p class="price">$35.50</p>
-									</div>
-								</li>		
-							</ul>
-						</div>
+						<?php }?>
+						
 					</div>							
 				</div>
 			</div>						
@@ -352,78 +303,39 @@ $(document).ready(function(){
 						<a class="left button" href="#myCarousel3" data-slide="prev"></a><a class="right button" href="#myCarousel3" data-slide="next"></a>
 					</span>
 				</h4>
-				<div id="myCarousel3" class="myCarousel carousel slide sliderku">
+								<div id="myCarousel3" class="myCarousel carousel slide sliderku">
 					<div class="carousel-inner">
-						<div class="active item">
-							<ul class="thumbnails">												
+					<?php 
+					$count3 = count($undangan);
+					$hasil3 = ceil((float)$count3 / 4);
+					$counter3 = 0;
+					for ($i=1; $i <= $hasil3; $i++) { ?>
+					
+						<div class="<?php if($i==1){echo 'active';} ?> item">
+							<ul class="thumbnails">	
+							<?php
+							for($j=0;$j<=3;$j++) { 
+								if($counter3 < $count3){?>											
 								<li class="span3">
 									<div class="product-box">
 										<span class="sale_tag"></span>
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/1.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p></br>
-										<p class="price">$17.25</p>
+										<p><img src="<?php echo base_url(); ?>uploads/<?php echo $undangan[$counter3]['gambar_barang'];?>"/></p>
+										<p><?php echo $undangan[$counter3]['nama_barang']; ?></p>
+										<p class="price">Rp. <?php echo number_format($undangan[$counter3]['harga_barang']); ?></p>
 									</div>
 								</li>
-								<li class="span3">
-									<div class="product-box">
-										<span class="sale_tag"></span>
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/2.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p></br>
-										<p class="price">$32.50</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/3.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p><br/>
-										<p class="price">$14.20</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/4.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p><br/>
-										<p class="price">$31.45</p>
-									</div>
-								</li>
+							<?php
+							$counter3++;
+							}
+						}
+							?>
 							</ul>
 						</div>
-						<div class="item">
-							<ul class="thumbnails">
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/5.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p><br/>
-										<p class="price">$22.30</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/6.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p><br/>
-										<p class="price">$40.25</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/7.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p><br/>
-										<p class="price">$10.45</p>
-									</div>
-								</li>
-								<li class="span3">
-									<div class="product-box">
-										<p><img src="<?php echo base_url() ?>assets/themes/images/ladies/8.jpg" alt="" /></a></p>
-										<p>Commodo consequat</p><br/>
-										<p class="price">$35.50</p>
-									</div>
-								</li>		
-							</ul>
-						</div>
+						<?php }?>
+						
 					</div>							
 				</div>
-			</div>						
-		</div>
+		</div></div>
 	</div>
 	<!-- //Undangan -->
 

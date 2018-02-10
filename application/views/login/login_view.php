@@ -13,6 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Creative Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
 	/>
+
 	<script type="application/x-javascript">
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -25,6 +26,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- Meta tag Keywords -->
 	<!-- css files -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login/csssku/styleku.css">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //css files -->
@@ -45,26 +47,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="main-content-agile">
 		<div class="sub-main-w3">
 			<h2>Login Here</h2>
-			<form action="#" method="post">
+			<form action="<?php echo base_url(); ?>index.php/login/manualLogin" method="post">
 				<div class="pom-agile">
 					<span class="fa fa-user-o" aria-hidden="true"></span>
-					<input placeholder="E-mail" name="Name" class="user" type="email" required="">
+					<input placeholder="E-mail" name="email" class="user" type="email" required="">
 				</div>
 				<div class="pom-agile">
 					<span class="fa fa-key" aria-hidden="true"></span>
-					<input placeholder="Password" name="Password" class="pass" type="password" required="">
+					<input placeholder="Password" name="password" class="pass" type="password" required="">
 				</div>
 				<div class="sub-w3l">
-					<div class="sub-agile">
-						<input type="checkbox" id="brand1" value="">
-						<label for="brand1">
-							<span></span>Remember me</label>
-					</div>
 					<a href="<?php echo base_url() ?>index.php/signup">Belum Punya Akun?</a>
 					<div class="clear"></div>
 				</div>
 				<div class="right-w3l">
 					<input type="submit" value="Login">
+				</div>
+					<div></div>
+					<br><br>
+				<div>
+					<a href="<?php echo $loginURL;?>"><img style="border-radius: 10px;height: 50px;" src="<?php echo base_url();?>assets/images/google.png"></a>
 				</div>
 			</form>
 		</div>
@@ -73,5 +75,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--footer-->
 	<!--//footer-->
 </body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
 
+<script type="text/javascript">
+	if ('<?php if(isset($notif)){echo $notif;}?>' == 'Login Gagal') {
+		swal({
+            title: "Mohon Maaf!",
+            text: "Periksa ulang Email atau Password anda !",
+            type: "error",
+            showConfirmButton: true,
+            confirmButtonColor: "#00ff00"
+        },function () {
+        	window.location.replace('<?php echo base_url(); ?>index.php/login')
+        })
+	}
+
+	if ('<?php echo $this->session->flashdata('notif');?>' == 'Berhasil') {
+		swal({
+            title: "Berhasil",
+            text: "<?php echo $this->session->flashdata('msg'); ?>",
+            type: "success",
+            showConfirmButton: true,
+            confirmButtonColor: "#00ff00"
+        })
+	}
+
+	if ('<?php echo $this->session->flashdata('notif');?>' == 'UnAuthorized') {
+		swal({
+            title: "Mohoh Untuk Login Terlebih Dahulu",
+            text: "<?php echo $this->session->flashdata('msg'); ?>",
+            type: "warning",
+            showConfirmButton: true,
+            confirmButtonColor: "#00ff00"
+        })
+	}
+        
+</script>
 </html>

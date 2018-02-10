@@ -24,6 +24,38 @@ class User extends CI_Model {
 
 	 }
 
+    public function cek_user($email,$pass)
+    {
+        
+        $query = $this->db->where('email',$email)
+            ->where('password',$pass)
+            ->get('user')
+            ->row_array();
+
+        
+        if (!empty($query)){
+            $userData = array(
+                'userData' => $query,
+                'loggedIn'=> true
+                );
+            $this->session->set_userdata($userData);
+
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function tambahUser($data = array())
+    {
+        $this->db->insert('user',$data);
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
 
 /* End of file user.php */

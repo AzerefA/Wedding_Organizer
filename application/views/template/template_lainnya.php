@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Wedding DUBY</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width">
 <meta charset="utf-8">
 <meta name="keywords" content="Wedding Plan Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -27,9 +27,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/datepicker.css">
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 <!-- //font -->
 <script src="<?php echo base_url() ?>assets/js/jquery-1.11.1.min.js"></script>
 <script src="<?php echo base_url() ?>assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -73,25 +75,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav link-effect-4">
-							<li class="first-list"><a href="<?php echo base_url() ?>index.php/home">Home</a> </li>
-							<li class="active dropdown">
-								<a href="codes.html" class="dropdown-toggle" data-hover="Pages" data-toggle="dropdown">Lainnya <b class="fa fa-angle-down fa-fw"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="<?php echo base_url() ?>index.php/gedung">Gedung</a></li>
-									<li><a href="<?php echo base_url() ?>index.php/dekor">Dekorasi</a></li>
-									<li><a href="<?php echo base_url() ?>index.php/undangan">Undangan</a></li>
-									<li><a href="<?php echo base_url() ?>index.php/mc">Pembawa Acara</a></li>
-									<li><a href="<?php echo base_url() ?>index.php/supportAcara">Pengisi Acara</a></li>
-									<li><a href="<?php echo base_url() ?>index.php/photographer">Fotografer</a></li>
-									<li><a href="<?php echo base_url() ?>index.php/catering">Katering</a></li>
-								</ul>
-							</li>
-							<li class="pinjam"><a href="<?php echo base_url() ?>index.php/pinjam">Pinjam</a></li>
-							<li class="info"><a href="<?php echo base_url() ?>index.php/info">Info</a></li>
-							<li class="w3ls-button">
-								<a href="<?php echo base_url() ?>index.php/login">Login <b class="fa fa-user fa-fw"></b></a>
-							</li>
-						</ul>
+								<li class="active first-list"><a href="<?php echo base_url() ?>index.php/home">Home</a> </li>
+								<li class="dropdown">
+									<a href="codes.html" class="dropdown-toggle" data-hover="Pages" data-toggle="dropdown">Produk<b class="fa fa-angle-down fa-fw"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="<?php echo base_url() ?>index.php/Gedung">Gedung</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/dekor">Dekorasi</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/undangan">Undangan</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/mc">Pembawa Acara</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/support">Pengisi Acara</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/photographer">Fotografer</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/catering">Katering</a></li>
+									</ul>
+								</li>
+								<li><a href="<?php echo base_url() ?>index.php/pinjam">Pesan</a></li>
+								<li><a href="<?php echo base_url() ?>index.php/info">Info</a></li>
+								<?php if($this->session->userdata('loggedIn') == true){?>
+								<li class="dropdown">
+									<a href="codes.html" class="dropdown-toggle" data-hover="Pages" data-toggle="dropdown">Me<b class="fa fa-angle-down fa-fw"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="<?php echo base_url() ?>index.php/login/userprofil">My Profile</a></li>
+										<li><a href="<?php echo base_url() ?>index.php/login/logout">Logout</a></li>
+										
+									</ul>
+								</li>
+								<?php }else{ ?>
+								<li class="w3ls-button"><a  href="<?php echo base_url() ;?>index.php/login">Login</a></li>
+								<?php } ?>
+							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div>
 			</div>
@@ -138,11 +149,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</script>
 		<!-- for-gallery-rotation -->
 			<script src="<?php echo base_url() ?>assets/other/js/modernizr.custom.97074.js"></script>
+
 			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 			<!--swipebox -->	
 				<link rel="stylesheet" href="<?php echo base_url() ?>assets/other/css/swipebox.css">
-					<script src="<?php echo base_url() ?>assets/other/js/jquery.swipebox.min.js"></script> 
+					<script src="<?php echo base_url() ?>assets/other/js/jquery.swipebox.min.js"></script>
+					<script src="<?php echo base_url() ?>assets/js/jquery.number.js"></script>  
+					<script src="<?php echo base_url() ?>assets/js/jquery.number.min.js"></script>  
 					<script type="text/javascript">
 						jQuery(function($) {
 							$(".swipebox").swipebox();
@@ -152,15 +166,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- //for-gallery-rotation -->
 		<!-- //for-gallery -->
 		<script type="text/javascript">
-			var a = "<?php echo $judul ?>"
+	      var a = "<?php echo $judul ?>"
 
-			if (a == 'Peminjaman') {
-				$("li.pinjam").toggleClass("active")
-				$("li.dropdown").removeClass("active")
-			}else if(a == 'Informasi'){
-				$("li.info").toggleClass("active")
-				$("li.dropdown").removeClass("active")
-			}
-		</script>
+	      if (a == 'Pemesanan') {
+	        $("li.pinjam").toggleClass("active")
+	        $("li.dropdown").removeClass("active")
+	      }else if(a == 'Informasi'){
+	        $("li.info").toggleClass("active")
+	        $("li.dropdown").removeClass("active")
+	      }else if(a == 'platinum' || a == 'gold' || a == 'silver'){
+	        $("li").removeClass("active")
+	      }
+    	</script>
+
+		<?php 
+if (!empty($script)) {
+    $this->load->view($script);
+  }
+
+ ?>
 </body>
 </html>

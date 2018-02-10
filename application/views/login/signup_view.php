@@ -20,16 +20,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	
 </head>
 <body>
-<h1 class="w3ls">Official Signup Form</h1>
+<h1 class="w3ls">Official DUBY Signup Form</h1>
 <div class="content-w3ls">
 	<div class="content-agile1">
 		<h2 class="agileits1">Official</h2>
-		<p class="agileits2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<p class="agileits2">Official DUBY Wedding Plan</p>
 	</div>
 	<div class="content-agile2">
-		<form action="#" method="post">
+		<form action="<?php echo base_url(); ?>index.php/signup/daftar" method="post">
 			<div class="form-control w3layouts"> 
 				<input type="text" id="firstname" name="firstname" placeholder="First Name" title="Please enter your First Name" required="">
+			</div>
+			<div class="form-control w3layouts"> 
+				<input type="text" id="firstname" name="lastname" placeholder="Last Name" title="Please enter your lastname Name" required="">
 			</div>
 
 			<div class="form-control w3layouts">	
@@ -44,7 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<input type="password" class="lock" name="confirm-password" placeholder="Confirm Password" id="password2" required="">
 			</div>			
 			
-			<input type="submit" class="register" value="Register">
+			<input type="submit" name="submit" class="register" style="background-color: orange;" value="Register">
 		</form>
 		<script type="text/javascript">
 			window.onload = function () {
@@ -61,15 +64,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					//empty string means no validation error
 			}
 		</script>
-		<p class="wthree w3l">Fast Signup With Your Favourite Social Profile</p>
+		<!-- <p class="wthree w3l">Fast Signup With Your Favourite Social Profile</p>
 		<ul class="social-agileinfo wthree2">
 			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 			<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-		</ul>
+			<li><a href="<?php echo $loginURL;?>"><i class="fa fa-google-plus"></i></a></li>
+		</ul> -->
 	</div>
 	<div class="clear"></div>
 </div>
 </body>
+<script type="text/javascript">
+	if ('<?php echo $this->session->flashdata('notif');?>' == 'Gagal') {
+		swal({
+            title: "Berhasil",
+            text: "<?php echo $this->session->flashdata('msg'); ?>",
+            type: "danger",
+            showConfirmButton: true,
+            confirmButtonColor: "#00ff00"
+        })
+	}
+</script>
 </html>

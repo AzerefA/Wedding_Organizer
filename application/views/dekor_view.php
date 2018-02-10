@@ -5,11 +5,13 @@
 					<ul id="da-thumbs" class="da-thumbs">
 					<?php foreach($barang as $barangs){?>
 						<li>
-							<a href="<?php echo base_url() ?>index.php/dekor/detil/<?php echo $barangs->id_dekorasi;?>">
-								<img src="<?php echo base_url(); ?>uploads/<?php echo $barangs->gambar_dekorasi;?>"/>
+							<a href="<?php echo base_url() ?>index.php/dekor/detil/<?php echo $barangs->id_barang;?>">
+								<img src="<?php echo base_url(); ?>uploads/<?php echo $barangs->gambar_barang;?>"/>
 								<div>
-									<h5>Literature</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+								<br>
+								<br>
+								<br>
+									<span><h5><?php echo $barangs->nama_barang;?></h5></span>
 								</div>
 							</a>
 						</li>
